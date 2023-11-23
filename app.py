@@ -1,22 +1,22 @@
 import streamlit as st
-import os
-from PyPDF2 import PdfReader
-from langchain.chat_models import ChatOpenAI
-from langchain.llms import OpenAI
+# import os
+# from PyPDF2 import PdfReader
+# from langchain.chat_models import ChatOpenAI
+# from langchain.llms import OpenAI
 from dotenv import load_dotenv
 from langchain.embeddings import  OpenAIEmbeddings
-from langchain.text_splitter import CharacterTextSplitter
-from langchain.vectorstores import FAISS, Qdrant
-from langchain.chains import ConversationalRetrievalChain, RetrievalQA
-from langchain.memory import ConversationBufferMemory
-from langchain import HuggingFaceHub
+# from langchain.text_splitter import CharacterTextSplitter
+# from langchain.vectorstores import FAISS, Qdrant
+# from langchain.chains import ConversationalRetrievalChain, RetrievalQA
+# from langchain.memory import ConversationBufferMemory
+# from langchain import HuggingFaceHub
 from streamlit_chat import message
-from langchain.document_loaders import PyPDFLoader
+# from langchain.document_loaders import PyPDFLoader
 from langchain.callbacks import get_openai_callback
-from sentence_transformers import SentenceTransformer
+# from sentence_transformers import SentenceTransformer
 # from langchain import PromptTemplate
-from langchain.prompts import PromptTemplate
-from qdrant_client import QdrantClient
+# from langchain.prompts import PromptTemplate
+# from qdrant_client import QdrantClient
 import logging
 from utils import load_local_vectordb_using_qdrant,get_conversation_chain,create_new_vectorstore_qdrant, get_text_chunks,loadDocuments, translation_query_conversation,eng_to_arabic_prompt,arabic_to_eng_prompt,get_recursive_chunks,create_line_file,preprocess_quran_file,preprocess_english_Quran_csv,prepare_arabic_docs,similarity_final_answer
 
